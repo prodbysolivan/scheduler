@@ -1,5 +1,5 @@
 {
-  "name": "@prodbysolivan/interpreter",
+  "name": "@prodbysolivan/scheduler",
   "description": "High-performance loop lifecycle manager with priority-based task orchestration.",
   "version": "1.0.0",
   "exports": "./source/index.ts",
