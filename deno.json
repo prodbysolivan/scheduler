@@ -1,5 +1,5 @@
 {
-  "name": "@prodby/solivan",
+  "name": "@prodbysolivan/interpreter",
   "description": "High-performance loop lifecycle manager with priority-based task orchestration.",
   "version": "1.0.0",
   "exports": "./source/index.ts",
