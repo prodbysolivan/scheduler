@@ -14,6 +14,7 @@ Deno, Node.js, and Bun environments.
 
 - Deno 1.40 or higher
 - [@prodbysolivan/signal](https://jsr.io/@prodbysolivan/signal)
+- [@prodbysolivan/types](https://jsr.io/@prodbysolivan/types)
 
 ### Installing
 
