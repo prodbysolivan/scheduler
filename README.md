@@ -13,7 +13,7 @@ Deno, Node.js, and Bun environments.
 ### Dependencies
 
 - Deno 1.40 or higher
-- [@prodbysolivan/signal](https://www.google.com/search?q=https://jsr.io/%40prodbysolivan/signal)
+- [@prodbysolivan/signal](https://jsr.io/@prodbysolivan/signal)
 
 ### Installing
 
