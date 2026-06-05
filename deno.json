@@ -11,6 +11,9 @@
       "exclude": ["adjacent-overload-signatures"]
     }
   },
+  "compilerOptions": {
+    "lib": ["deno.window", "dom"]
+  },
   "tasks": {
     "format": "deno fmt",
     "lint": "deno lint",
