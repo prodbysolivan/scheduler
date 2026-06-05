@@ -30,6 +30,7 @@ export class Channel {
   private _entries: Tickable[] = [];
 
   // #region Signals
+  private _onTick: Signal<[number]> = new Signal();
   private _onEnabledChanged: Signal<[boolean]> = new Signal();
   private _onEntryAdded: Signal<[Tickable]> = new Signal();
   private _onEntryRemoved: Signal<[Tickable]> = new Signal();
@@ -57,6 +58,9 @@ export class Channel {
   }
 
   /** Signal emitted whenever the enabled state is toggled. */
+  public get onTick(): ReadonlySignal<[number]> {
+    return this._onTick;
+  }
   public get onEnabledChanged(): ReadonlySignal<[boolean]> {
     return this._onEnabledChanged;
   }
@@ -82,6 +86,7 @@ export class Channel {
 
   // #region Methods
   public tick(deltaTime: number): void {
+    this._onTick.fire(deltaTime);
     if (!this._enabled) throw new Error(`Channel ${this.id} is not enabled`);
     for (const entry of this._entries) {
       entry.tick(deltaTime);
