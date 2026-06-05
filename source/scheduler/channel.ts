@@ -1,5 +1,5 @@
 import { type ReadonlySignal, Signal } from "@prodbysolivan/signal";
-import type { Tickable } from "../common/types/tickable.ts";
+import type { Tickable } from "@prodbysolivan/types";
 
 /**
  * Configuration settings for a Channel instance.

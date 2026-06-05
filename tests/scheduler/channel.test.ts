@@ -1,7 +1,7 @@
 import { assertEquals, assertThrows } from "@std/assert";
 import { assertSpyCall, spy } from "@std/mock";
 import { Channel } from "../../source/scheduler/channel.ts";
-import type { Tickable } from "../../source/common/types/tickable.ts";
+import type { Tickable } from "@prodbysolivan/types";
 
 Deno.test("Channel: Entry Management", async (testContext) => {
   const channel = new Channel({ id: "management-test" });
