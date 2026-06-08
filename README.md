@@ -4,7 +4,7 @@ High-performance loop lifecycle manager with priority-based task orchestration.
 
 ## Description
 
-A modular and platform-agnostic task manager for TypeScript. It uses an
+A modular and platform-agnostic loop manager built for TypeScript. It uses an
 event-driven architecture to manage execution loops, allowing developers to
 group `Tickable` objects into `Channels` and process them based on explicit
 priority levels, ensuring deterministic and efficient execution across Web,
