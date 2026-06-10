@@ -31,14 +31,21 @@ Define your `TickProvider` and initialize the scheduler to start your loop:
 ```typescript
 import { Channel, NodeTickProvider, Scheduler } from "@prodbysolivan/scheduler";
 
+// Initialize a provider to handle the timing source (Node.js/Deno environment)
 const provider = new NodeTickProvider();
+
+// Create the scheduler instance with a specific tick rate (e.g., 60 ticks per second)
 const scheduler = new Scheduler({ provider, tickrate: 60 });
+
+// Create a communication channel with a defined ID and priority
 const channel = new Channel({ id: "main-loop", priority: 10 });
 
+// Register a task within the channel to execute code on every tick
 channel.addToEntries({
-  tick: (dt) => console.log(`Processing tick: ${dt}`),
+  tick: (dt) => console.log(`Processing tick: ${dt}`), // dt represents delta time
 });
 
+// Register the channel to the scheduler and start the process
 scheduler.addToChannels(channel);
 scheduler.start();
 ```
