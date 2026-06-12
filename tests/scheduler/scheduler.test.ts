@@ -45,7 +45,7 @@ Deno.test("Scheduler: Execution Loop and Priority", async (testContext) => {
     stop: () => {},
   };
 
-  const scheduler = new Scheduler({ provider: mockProvider });
+  const scheduler = new Scheduler({ provider: mockProvider});
 
   const lowPriority = new Channel({ id: "low", priority: 1 });
   const highPriority = new Channel({ id: "high", priority: 10 });
