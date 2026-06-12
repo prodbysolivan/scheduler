@@ -1,5 +1,7 @@
 # Scheduler
 
+![Deno](https://img.shields.io/badge/deno-1.40%2B-black?logo=deno) [![JSR](https://jsr.io/badges/@prodbysolivan/scheduler)](https://jsr.io/@prodbysolivan/scheduler) ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
 > High-performance loop lifecycle manager with priority-based task orchestration.
 
 ## Description
