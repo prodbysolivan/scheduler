@@ -6,7 +6,7 @@ import type { TickProvider } from "../../source/providers/provider.ts";
 
 Deno.test("Scheduler: Channel Lifecycle Management", async (testContext) => {
   const mockProvider: TickProvider = { tick: () => {}, stop: () => {} };
-  const scheduler = new Scheduler({ provider: mockProvider, tickrate: 60 });
+  const scheduler = new Scheduler({ provider: mockProvider });
   const channel = new Channel({ id: "test-channel" });
 
   await testContext.step("should add a channel successfully", () => {
@@ -45,7 +45,7 @@ Deno.test("Scheduler: Execution Loop and Priority", async (testContext) => {
     stop: () => {},
   };
 
-  const scheduler = new Scheduler({ provider: mockProvider, tickrate: 60 });
+  const scheduler = new Scheduler({ provider: mockProvider });
 
   const lowPriority = new Channel({ id: "low", priority: 1 });
   const highPriority = new Channel({ id: "high", priority: 10 });
